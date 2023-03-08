@@ -19,6 +19,7 @@ public class leerSipnosis extends AppCompatActivity {
     ImageView imgSipnosis;
     TextView NombreManga,txtSipnosis;
     Button btnRegresar;
+    /*Lanzame tu gaaa*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
