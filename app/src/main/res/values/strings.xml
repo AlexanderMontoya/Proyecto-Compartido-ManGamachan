@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ManGamachan</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="correo">Correo</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="registrarme">Registrarme</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="contenido_img">contenido img</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
+</resources>

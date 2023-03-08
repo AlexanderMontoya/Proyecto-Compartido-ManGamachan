@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout-land/activity_main.xml" value="0.1728395061728395" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout-land/activity_menu_mangas.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout/activity_form_inicio_sesion.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout/activity_form_registro.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout/activity_lectura_manga.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout/activity_lista_mangas.xml" value="0.16983695652173914" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout/activity_main.xml" value="0.16983695652173914" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout/activity_mangaslista.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout/activity_menu_mangas.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/layout/activity_principal.xml" value="0.17" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/ManGamachan/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/layout/activity_capitulos_list.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/layout/activity_form_inicio_sesion.xml" value="0.12907608695652173" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/layout/activity_form_registro.xml" value="0.12907608695652173" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/layout/activity_lectura_manga.xml" value="0.12907608695652173" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/layout/activity_leer_sipnosis.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/layout/activity_mangas_list.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/layout/activity_principal.xml" value="0.12907608695652173" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/layout/list_capitulos.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/layout/list_element.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1435" />
+        <entry key="..\:/AndroidProjects/gamachan/ManGamachan/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1435" />
+        <entry key="..\:/ManGamachan/app/src/main/res/layout/activity_lectura_manga.xml" value="0.5859085290482077" />
+        <entry key="..\:/ManGamachan/app/src/main/res/layout/activity_lista_mangas.xml" value="0.33" />
+        <entry key="..\:/ManGamachan/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/PracticasAndroid/ManGamachan/app/src/main/res/layout-land/activity_main.xml" value="0.21516754850088182" />
+        <entry key="..\:/PracticasAndroid/ManGamachan/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan/ManGamachan/app/src/main/res/layout/activity_lectura_manga.xml" value="0.47332686711930166" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan/ManGamachan/app/src/main/res/layout/activity_main.xml" value="1.0" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_capitulos_list.xml" value="0.4" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_form_inicio_sesion.xml" value="0.25181159420289856" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_form_registro.xml" value="0.25181159420289856" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_lectura_manga.xml" value="0.25181159420289856" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_leer_sipnosis.xml" value="0.4" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_lista_mangas.xml" value="0.25181159420289856" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_main.xml" value="0.25181159420289856" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_mangas_list.xml" value="0.25181159420289856" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_mangaslista.xml" value="0.25181159420289856" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_menu_mangas.xml" value="0.25181159420289856" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/activity_principal.xml" value="0.25181159420289856" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/list_capitulos.xml" value="0.4" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan2/ManGamachan/app/src/main/res/layout/list_element.xml" value="0.264" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan4/ManGamachan/app/src/main/res/layout/activity_capitulos_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan4/ManGamachan/app/src/main/res/layout/activity_form_inicio_sesion.xml" value="0.264" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan4/ManGamachan/app/src/main/res/layout/activity_lectura_manga.xml" value="0.25416666666666665" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan4/ManGamachan/app/src/main/res/layout/activity_leer_sipnosis.xml" value="0.2441123188405797" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan4/ManGamachan/app/src/main/res/layout/activity_mangas_list.xml" value="0.12360688956433637" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan4/ManGamachan/app/src/main/res/layout/activity_principal.xml" value="0.25416666666666665" />
+        <entry key="..\:/PracticasAndroid/OriginalMangamachan4/ManGamachan/app/src/main/res/layout/list_element.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lab1_/Desktop/ManGamachan/app/src/main/res/layout/activity_main.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

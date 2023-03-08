@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/_f2a50415469a354b9db52383c6d3ecd"
+    android:backgroundTint="#000000"
+    android:backgroundTintMode="add"
+    tools:context=".formRegistro">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="141dp"
+        android:contentDescription="@string/contenido_img"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtNickName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/nick_name"
+        android:textColorHint="#FFFFFF"
+        app:boxBackgroundColor="#9C27AE2D"
+        app:boxStrokeColor="#4CAF50"
+        app:endIconTint="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        app:placeholderTextColor="#FFFFFF"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
+        app:startIconTint="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtCorreo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNickName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/correo"
+        android:textColorHint="#FFFFFF"
+        app:boxBackgroundColor="#9C27AE2D"
+        app:boxStrokeColor="#4CAF50"
+        app:endIconTint="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        app:placeholderTextColor="#FFFFFF"
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
+        app:startIconTint="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtContra"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCorreo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/contrase_a"
+        android:textColorHint="#FFFFFF"
+        app:boxBackgroundColor="#9C27AE2D"
+        app:boxStrokeColor="#4CAF50"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        app:placeholderTextColor="#FFFFFF"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:startIconTint="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:password="true"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnRegistrarme"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtContra"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="validar"
+        android:text="@string/registrarme"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:rippleColor="#226825"
+        app:strokeColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnIniciarSesion"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRegistrarme"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/iniciar_sesi_n"
+        android:textColor="#89FF00"
+        android:textSize="16sp"
+        app:cornerRadius="20dp"
+        app:rippleColor="#367038" />
+</RelativeLayout>
