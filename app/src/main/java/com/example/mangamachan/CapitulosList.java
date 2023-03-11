@@ -37,9 +37,9 @@ public class CapitulosList extends AppCompatActivity{
     RequestQueue requestQueue;
     RecyclerView recyclerView;
     CapitulosAdapter capitulosAdapter;
-    String sipnosis;
-    String imagen;
-    String titulo;
+    String url_img_manga;
+    String title_manga;
+    String synopsis_manga;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,34 +68,31 @@ public class CapitulosList extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent a=new Intent(CapitulosList.this,leerSipnosis.class);
-                a.putExtra("titulo",titulo);
-                a.putExtra("imagen",imagen);
-                a.putExtra("sipnosis",sipnosis);
-                a.putExtra("idManga",aea);
+                a.putExtra("titulo",title_manga);
+                a.putExtra("imagen",url_img_manga);
+                a.putExtra("sipnosis",synopsis_manga);
                 startActivity(a);
             }
         });
     }
 
     public void mostrarContenido(String idManga){
-        String url = "https://mangamachan.000webhostapp.com/buscar_manga.php";
+        String url = "https://mangamachan.000webhostapp.com/api/?id_manga="+idManga;
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, (response) -> {
             JSONObject jsonObject = null;
             for (int j = 0; j < response.length(); j++) {
                 try {
                     jsonObject = response.getJSONObject(j);
-                    String id;
-                    id=jsonObject.getString("idmanga");
-                    if(id.equals(idManga)){
-                        titulo=jsonObject.getString("titulo");
-                        imagen=jsonObject.getString("url_image");
-                        sipnosis=jsonObject.getString("sipnosis");
-                        Picasso.get()
-                                .load(imagen)
-                                .error(R.mipmap.ic_launcher_round)
-                                .into(imgManga);
-                        lblNombreManga.setText(titulo);
-                    }
+                    String id_manga;
+                    id_manga=jsonObject.getString("id_manga");
+                    url_img_manga=jsonObject.getString("url_img_manga");
+                    title_manga=jsonObject.getString("title_manga");
+                    synopsis_manga=jsonObject.getString("synopsis_manga");
+                    Picasso.get()
+                            .load(url_img_manga)
+                            .error(R.mipmap.ic_launcher_round)
+                            .into(imgManga);
+                    lblNombreManga.setText(title_manga);
                 } catch (JSONException e) {
                     Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
@@ -113,21 +110,21 @@ public class CapitulosList extends AppCompatActivity{
 
     public void init(String aea){
         elements =new ArrayList<>();
-        String url = "https://mangamachan.000webhostapp.com/buscar_cap_manga.php?idManga="+aea;
+        String url = "https://mangamachan.000webhostapp.com/api/capitulos/?id_manga="+aea;
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, (response) -> {
             JSONObject jsonObject = null;
             for (int j = 0; j < response.length(); j++) {
                 try {
                     jsonObject = response.getJSONObject(j);
-                    String paginas;
-                    String cap;
-                    String id;
-                    paginas=jsonObject.getString("paginas");
-                    cap=jsonObject.getString("capitulo");
-                    id=jsonObject.getString("idmangacap");
-                    String idmanga=jsonObject.getString("idmanga");
-                    String img1=jsonObject.getString("urlpagina");
-                    elements.add(new CapituloController(paginas,cap,id,idmanga,img1));
+                    String chapter_pages;
+                    String manga_chapter;
+                    String id_manga_chapter;
+                    chapter_pages=jsonObject.getString("chapter_pages");
+                    manga_chapter=jsonObject.getString("manga_chapter");
+                    id_manga_chapter=jsonObject.getString("id_manga_chapter");
+                    String id_manga=jsonObject.getString("id_manga");
+                    String url_page=jsonObject.getString("url_page");
+                    elements.add(new CapituloController(chapter_pages,manga_chapter,id_manga_chapter,id_manga,url_page));
 
                     capitulosAdapter=new CapitulosAdapter(elements, this);
                     recyclerView=findViewById(R.id.listRecyclerViewCapitulos);

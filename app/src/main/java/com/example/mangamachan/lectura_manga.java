@@ -30,7 +30,7 @@ public class lectura_manga extends AppCompatActivity {
     TextView lblPagina;
     ImageView imagen;
     int cont=1;
-    String url_image="aea";
+    String url_page="aea";
     int paginas=1;
     RequestQueue requestQueue;
     @Override
@@ -45,7 +45,6 @@ public class lectura_manga extends AppCompatActivity {
         btnRegresar=findViewById(R.id.btnRegresar);
         imagen=findViewById(R.id.imgManga);
         lblPagina=findViewById(R.id.lblPag);
-        //cantidad_paginas(aea);
         buscarImagen(aea,1);
         lblPagina.setText((cont)+"\n/\n"+paginas);
         btnAvanzar.setOnClickListener(new View.OnClickListener() {
@@ -94,29 +93,26 @@ public class lectura_manga extends AppCompatActivity {
         btnRegresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a=new Intent(lectura_manga.this,CapitulosList.class);
-                a.putExtra("ID", idmanga);
-                startActivity(a);
+                finish();
             }
         });
 
     }
     public void buscarImagen(String id,int ou){
-        String url="https://mangamachan.000webhostapp.com/buscar_pag_manga.php?idManga="+id+"&nroPag="+ou;
+        String url="https://mangamachan.000webhostapp.com/api/paginas/?id_manga_chapter="+id+"&nro_page="+ou;
         JsonArrayRequest jsonArrayRequest=new JsonArrayRequest(url, (response) -> {
             JSONObject jsonObject = null;
-            url_image="gaaa";
             for (int i = 0; i < response.length(); i++) {
                 try {
                     jsonObject = response.getJSONObject(i);
-                    url_image = jsonObject.getString("urlpagina");
+                    url_page = jsonObject.getString("url_page");
 
                 } catch (JSONException e) {
                     Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
             Picasso.get()
-                    .load(url_image)
+                    .load(url_page)
                     .error(R.mipmap.ic_launcher_round)
                     .into(imagen);
         }, new Response.ErrorListener() {

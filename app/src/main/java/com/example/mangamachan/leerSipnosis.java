@@ -19,7 +19,6 @@ public class leerSipnosis extends AppCompatActivity {
     ImageView imgSipnosis;
     TextView NombreManga,txtSipnosis;
     Button btnRegresar;
-    /*Lanzame tu gaaa*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +26,6 @@ public class leerSipnosis extends AppCompatActivity {
         String titulo=getIntent().getStringExtra("titulo");
         String imagen=getIntent().getStringExtra("imagen");
         String sipnosis=getIntent().getStringExtra("sipnosis");
-        String idManga=getIntent().getStringExtra("idManga");
         imgSipnosis=findViewById(R.id.imagenMangaSipnosis);
         NombreManga=findViewById(R.id.lblNombreMangaSipnosis);
         btnRegresar=findViewById(R.id.btnRegresarCapitulosManga);

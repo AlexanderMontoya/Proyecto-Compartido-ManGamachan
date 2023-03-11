@@ -40,19 +40,19 @@ public class MangasList extends AppCompatActivity implements SearchView.OnQueryT
 
     public void init(){
         elements =new ArrayList<>();
-            String url = "https://mangamachan.000webhostapp.com/buscar_manga.php";
+            String url = "https://mangamachan.000webhostapp.com/api/";
             JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, (response) -> {
             JSONObject jsonObject = null;
             for (int j = 0; j < response.length(); j++) {
                 try {
                     jsonObject = response.getJSONObject(j);
-                    String imagen;
-                    String titulo;
-                    String id;
-                    imagen=jsonObject.getString("url_image");
-                    titulo=jsonObject.getString("titulo");
-                    id=jsonObject.getString("idmanga");
-                    elements.add(new ListElement(imagen,titulo,id));
+                    String url_img_manga;
+                    String title_manga;
+                    String id_manga;
+                    url_img_manga=jsonObject.getString("url_img_manga");
+                    title_manga=jsonObject.getString("title_manga");
+                    id_manga=jsonObject.getString("id_manga");
+                    elements.add(new ListElement(url_img_manga,title_manga,id_manga));
                     listAdapter=new ListAdapter(elements, this);
                     recyclerView=findViewById(R.id.listRecyclerView);
                     recyclerView.setHasFixedSize(true);
