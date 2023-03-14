@@ -1,4 +1,4 @@
-package com.example.mangamachan;
+package com.example.mangamachan.controladores;
 
 public class CapituloController {
     public String paginas;

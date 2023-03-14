@@ -1,21 +1,19 @@
 package com.example.mangamachan;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mangamachan.controladores.PaginaController;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class PaginasAdapter extends RecyclerView.Adapter<PaginasAdapter.ViewHolder>{
     private List<PaginaController> mData;

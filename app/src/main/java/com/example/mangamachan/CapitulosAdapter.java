@@ -11,11 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mangamachan.controladores.CapituloController;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CapitulosAdapter extends RecyclerView.Adapter<CapitulosAdapter.ViewHolder> {
         private List<CapituloController> mData2;

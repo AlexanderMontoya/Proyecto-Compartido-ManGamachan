@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mangamachan.controladores.MangasController;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -74,7 +75,7 @@ public class MangasAdapter extends RecyclerView.Adapter<MangasAdapter.ViewHolder
             TextView titulo;
             public ViewHolder(@NonNull View itemView){
                 super(itemView);
-                imageManga=itemView.findViewById(R.id.iconImageView);
+                imageManga=itemView.findViewById(R.id.mangaImageView);
                 titulo=itemView.findViewById(R.id.nameTextView);
 
             }

@@ -5,13 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +17,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.mangamachan.controladores.CapituloController;
+import com.example.mangamachan.db.DbFavoritos;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
@@ -61,7 +60,16 @@ public class CapitulosList extends AppCompatActivity{
         btnFavorito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Opcion aun no disponible :v", Toast.LENGTH_SHORT).show();
+                DbFavoritos dbFavoritos= new DbFavoritos(CapitulosList.this);
+                boolean hay=dbFavoritos.consultarFavorito(aea);
+                if(hay){
+                    Toast.makeText(CapitulosList.this, "El manga ya esta en tus Favoritos", Toast.LENGTH_SHORT).show();
+                }else{
+                    long id= dbFavoritos.insertarFavorito(aea,title_manga,url_img_manga);
+                    if(id>0){
+                        Toast.makeText(CapitulosList.this, title_manga+" fue añadido a tus favoritos", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
         btnSipnosis.setOnClickListener(new View.OnClickListener() {

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.ManGamachan"
         tools:targetApi="31">
         <activity
+            android:name=".FavoritosList"
+            android:exported="false" />
+        <activity
             android:name=".lectura_manga_vertical"
             android:exported="false" />
         <activity
