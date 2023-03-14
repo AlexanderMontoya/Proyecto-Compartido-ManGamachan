@@ -1,6 +1,6 @@
 package com.example.mangamachan;
 
-public class ListElement {
+public class MangasController {
     public String url_imagen;
     public String name;
     public String id;
@@ -13,7 +13,7 @@ public class ListElement {
         this.id = id;
     }
 
-    public ListElement(String url_imagen, String name,String id) {
+    public MangasController(String url_imagen, String name, String id) {
         this.url_imagen = url_imagen;
         this.name = name;
         this.id=id;

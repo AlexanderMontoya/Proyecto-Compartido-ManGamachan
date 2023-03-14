@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,12 +17,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-    private List<ListElement> mData;
-    private List<ListElement> mDataOriginal;
+public class MangasAdapter extends RecyclerView.Adapter<MangasAdapter.ViewHolder> {
+    private List<MangasController> mData;
+    private List<MangasController> mDataOriginal;
     private LayoutInflater mInflater;
     private Context context;
-    public ListAdapter(List<ListElement> itemList,Context context){
+    public MangasAdapter(List<MangasController> itemList, Context context){
         this.mInflater= LayoutInflater.from(context);
         this.context=context;
         this.mData=itemList;
@@ -35,13 +34,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     public int getItemCount(){return mData.size();}
 
     @Override
-    public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public MangasAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view=mInflater.inflate(R.layout.list_element,null);
-        return new ListAdapter.ViewHolder(view);
+        return new MangasAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ListAdapter.ViewHolder holder,final int position){
+    public void onBindViewHolder(final MangasAdapter.ViewHolder holder, final int position){
         holder.bindData(mData.get(position));
     }
 
@@ -52,11 +51,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             mData.addAll(mDataOriginal);
         }else{
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-                List<ListElement> collecion=mData.stream().filter(i -> i.getName().toLowerCase().contains(txtBuscar.toLowerCase())).collect(Collectors.toList());
+                List<MangasController> collecion=mData.stream().filter(i -> i.getName().toLowerCase().contains(txtBuscar.toLowerCase())).collect(Collectors.toList());
                 mData.clear();
                 mData.addAll(collecion);
             }else{
-                for(ListElement c:mDataOriginal){
+                for(MangasController c:mDataOriginal){
                     if(c.getName().toLowerCase().contains(txtBuscar.toLowerCase())){
                         mData.add(c);
                     }
@@ -66,7 +65,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         notifyDataSetChanged();
     }
 
-    public void setItems(List<ListElement>items){
+    public void setItems(List<MangasController>items){
         mData=items;
     }
 
@@ -80,7 +79,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
             }
 
-            void bindData(final ListElement item){
+            void bindData(final MangasController item){
                 Picasso.get()
                         .load(item.getImagen())
                         .error(R.mipmap.ic_launcher_round)
