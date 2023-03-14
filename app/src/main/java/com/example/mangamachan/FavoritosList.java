@@ -18,7 +18,7 @@ public class FavoritosList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritos_list);
-
+    // Favoritos
         listaFavoritos=findViewById(R.id.listaFavoritos);
         listaFavoritos.setLayoutManager(new LinearLayoutManager(this));
         DbFavoritos dbFavoritos=new DbFavoritos(FavoritosList.this);
