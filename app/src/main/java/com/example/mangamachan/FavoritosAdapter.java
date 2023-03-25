@@ -1,6 +1,8 @@
 package com.example.mangamachan;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +61,15 @@ public class FavoritosAdapter extends RecyclerView.Adapter<FavoritosAdapter.Favo
                     //enganchePet.notifyDataSetChanged();
                     notifyDataSetChanged();
                 }
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context=view.getContext();
+                Intent intent=new Intent(context,CapitulosList.class);
+                intent.putExtra("ID",listaFavoritos.get(position).getId_manga());
+                context.startActivity(intent);
             }
         });
     }

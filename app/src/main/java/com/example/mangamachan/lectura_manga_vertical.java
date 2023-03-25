@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,24 +29,41 @@ public class lectura_manga_vertical extends AppCompatActivity {
     RecyclerView recyclerView;
     PaginasAdapter paginasAdapter;
     Button btnRegresar;
+    Button btnCambiarEstilo;
+    String idMangacap;
+    int paginas;
+    String idmanga;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lectura_manga_vertical);
-        String aea=getIntent().getStringExtra("id_manga_chapter");
-        init(aea);
+        idMangacap=getIntent().getStringExtra("idMangacap");
+        paginas=Integer.parseInt(getIntent().getStringExtra("cantPaginas"));
+        idmanga=getIntent().getStringExtra("idmanga");
+        init(idMangacap);
         btnRegresar=findViewById(R.id.btnRegresar);
+        btnCambiarEstilo=findViewById(R.id.btnCambiarEstilo);
         btnRegresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
+        btnCambiarEstilo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a=new Intent(lectura_manga_vertical.this, lectura_manga.class);
+                a.putExtra("idMangacap",idMangacap);
+                a.putExtra("cantPaginas", ""+paginas);
+                startActivity(a);
+                finish();
+            }
+        });
     }
 
-    public void init(String aea){
+    public void init(String idMangacap){
         elements =new ArrayList<>();
-        String url = "https://mangamachan.000webhostapp.com/api/paginas/?id_manga_chapter="+aea;
+        String url = "https://mangamachan.000webhostapp.com/api/paginas/?id_manga_chapter="+idMangacap;
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, (response) -> {
             JSONObject jsonObject = null;
             for (int j = 0; j < response.length(); j++) {

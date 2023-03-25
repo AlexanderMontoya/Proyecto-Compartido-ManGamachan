@@ -70,7 +70,7 @@ public class CapitulosAdapter extends RecyclerView.Adapter<CapitulosAdapter.View
                     @Override
                     public void onClick(View view) {
                         Context context=view.getContext();
-                        Intent intent=new Intent(context,lectura_manga.class);
+                        Intent intent=new Intent(context,lectura_manga_vertical.class);
                         intent.putExtra("idMangacap",item.getId());
                         intent.putExtra("idmanga",item.getIdmanga());
                         intent.putExtra("cantPaginas",item.getPaginas());

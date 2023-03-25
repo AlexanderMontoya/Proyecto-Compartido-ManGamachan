@@ -38,8 +38,7 @@ public class lectura_manga extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lectura_manga);
         String aea=getIntent().getStringExtra("idMangacap");
-        int paginas=Integer.parseInt(getIntent().getStringExtra("cantPaginas"));
-        String idmanga=getIntent().getStringExtra("idmanga");
+        paginas=Integer.parseInt(getIntent().getStringExtra("cantPaginas"));
         btnAvanzar=findViewById(R.id.btnAvanzar);
         btnRetroceder=findViewById(R.id.btnRetroceder);
         btnRegresar=findViewById(R.id.btnRegresar);
@@ -50,7 +49,7 @@ public class lectura_manga extends AppCompatActivity {
         btnAvanzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*int foto;
+                int foto;
                 if(cont>=paginas){
                     Toast.makeText(getApplicationContext(),
                             "Esta es la ultima pagina",Toast.LENGTH_SHORT).show();
@@ -58,11 +57,7 @@ public class lectura_manga extends AppCompatActivity {
                     cont++;
                     buscarImagen(aea,cont);
                     lblPagina.setText((cont)+"\n/\n"+paginas);
-                }*/
-                Intent a=new Intent(lectura_manga.this, lectura_manga_vertical.class);
-                a.putExtra("id_manga_chapter",aea);
-                startActivity(a);
-                finish();
+                }
             }
         });
         imagen.setOnClickListener(new View.OnClickListener() {

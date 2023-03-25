@@ -38,6 +38,8 @@ public class CapitulosList extends AppCompatActivity{
     CapitulosAdapter capitulosAdapter;
     String url_img_manga;
     String title_manga;
+    String autor_manga;
+    String artista_manga;
     String synopsis_manga;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +80,8 @@ public class CapitulosList extends AppCompatActivity{
                 Intent a=new Intent(CapitulosList.this,leerSipnosis.class);
                 a.putExtra("titulo",title_manga);
                 a.putExtra("imagen",url_img_manga);
+                a.putExtra("autor", autor_manga);
+                a.putExtra("artista", artista_manga);
                 a.putExtra("sipnosis",synopsis_manga);
                 startActivity(a);
             }
@@ -95,6 +99,8 @@ public class CapitulosList extends AppCompatActivity{
                     id_manga=jsonObject.getString("id_manga");
                     url_img_manga=jsonObject.getString("url_img_manga");
                     title_manga=jsonObject.getString("title_manga");
+                    autor_manga=jsonObject.getString("autor_manga");
+                    artista_manga=jsonObject.getString("artista_manga");
                     synopsis_manga=jsonObject.getString("synopsis_manga");
                     Picasso.get()
                             .load(url_img_manga)

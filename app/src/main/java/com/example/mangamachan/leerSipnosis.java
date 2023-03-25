@@ -24,6 +24,8 @@ public class leerSipnosis extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leer_sipnosis);
         String titulo=getIntent().getStringExtra("titulo");
+        String autor=getIntent().getStringExtra("autor");
+        String artista=getIntent().getStringExtra("artista");
         String imagen=getIntent().getStringExtra("imagen");
         String sipnosis=getIntent().getStringExtra("sipnosis");
         imgSipnosis=findViewById(R.id.imagenMangaSipnosis);
@@ -31,7 +33,7 @@ public class leerSipnosis extends AppCompatActivity {
         btnRegresar=findViewById(R.id.btnRegresarCapitulosManga);
         txtSipnosis=findViewById(R.id.txtSipnosis);
         NombreManga.setText(titulo);
-        txtSipnosis.setText(sipnosis);
+        txtSipnosis.setText("Autor(es): "+ autor + "\nArtist(s): " + artista +"\nSipnosis: " + sipnosis);
         Picasso.get()
                 .load(imagen)
                 .error(R.mipmap.ic_launcher_round)

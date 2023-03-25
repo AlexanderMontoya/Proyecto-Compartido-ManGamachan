@@ -4,22 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/etrgethretwsrt45y65ts"
     tools:context=".FavoritosList">
+
+    <Button
+        android:id="@+id/btnRegresarListMangas"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:text="regresar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#0024A148"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_baseline_arrow_back_24"
+        app:iconGravity="start"
+        app:iconTint="#FFFFFF"
+        app:rippleColor="#226825"
+        app:strokeColor="#FFFFFF"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Favoritos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegresarListMangas" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaFavoritos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:background="@drawable/_b5020d5568fea4e4b2b0556aadf5418"
+        android:backgroundTint="#9C27B0"
+        android:backgroundTintMode="multiply"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
